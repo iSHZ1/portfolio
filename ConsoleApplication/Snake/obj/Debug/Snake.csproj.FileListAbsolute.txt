@@ -1,0 +1,8 @@
+C:\Users\Xarda\Downloads\snake\snake-master\Snake\Snake\bin\Debug\Snake.exe.config
+C:\Users\Xarda\Downloads\snake\snake-master\Snake\Snake\bin\Debug\Snake.exe
+C:\Users\Xarda\Downloads\snake\snake-master\Snake\Snake\bin\Debug\Snake.pdb
+C:\Users\Xarda\Downloads\snake\snake-master\Snake\Snake\obj\Debug\Snake.csproj.AssemblyReference.cache
+C:\Users\Xarda\Downloads\snake\snake-master\Snake\Snake\obj\Debug\Snake.csproj.SuggestedBindingRedirects.cache
+C:\Users\Xarda\Downloads\snake\snake-master\Snake\Snake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
+C:\Users\Xarda\Downloads\snake\snake-master\Snake\Snake\obj\Debug\Snake.exe
+C:\Users\Xarda\Downloads\snake\snake-master\Snake\Snake\obj\Debug\Snake.pdb
