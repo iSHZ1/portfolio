@@ -1,0 +1,17 @@
+E:\VisualStudio\ActManager\obj\Debug\net6.0\ActManager.csproj.AssemblyReference.cache
+E:\VisualStudio\ActManager\obj\Debug\net6.0\ActManager.GeneratedMSBuildEditorConfig.editorconfig
+E:\VisualStudio\ActManager\obj\Debug\net6.0\ActManager.AssemblyInfoInputs.cache
+E:\VisualStudio\ActManager\obj\Debug\net6.0\ActManager.AssemblyInfo.cs
+E:\VisualStudio\ActManager\obj\Debug\net6.0\ActManager.csproj.CoreCompileInputs.cache
+E:\VisualStudio\ActManager\bin\Debug\net6.0\ActManager.exe
+E:\VisualStudio\ActManager\bin\Debug\net6.0\ActManager.deps.json
+E:\VisualStudio\ActManager\bin\Debug\net6.0\ActManager.runtimeconfig.json
+E:\VisualStudio\ActManager\bin\Debug\net6.0\ActManager.dll
+E:\VisualStudio\ActManager\bin\Debug\net6.0\ActManager.pdb
+E:\VisualStudio\ActManager\bin\Debug\net6.0\Newtonsoft.Json.dll
+E:\VisualStudio\ActManager\obj\Debug\net6.0\ActManager.csproj.CopyComplete
+E:\VisualStudio\ActManager\obj\Debug\net6.0\ActManager.dll
+E:\VisualStudio\ActManager\obj\Debug\net6.0\refint\ActManager.dll
+E:\VisualStudio\ActManager\obj\Debug\net6.0\ActManager.pdb
+E:\VisualStudio\ActManager\obj\Debug\net6.0\ActManager.genruntimeconfig.cache
+E:\VisualStudio\ActManager\obj\Debug\net6.0\ref\ActManager.dll
