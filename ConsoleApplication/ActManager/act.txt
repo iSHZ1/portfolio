@@ -1,1 +1,1 @@
-﻿{"Type":0,"TotalCost":105.99,"Products":[{"Id":"1231233452","Name":"SHS X25BH","Price":105.00,"Quantity":1}],"OrderDate":"2022-07-06T22:56:07.4403872+03:00","Id":0,"ExternalId":"199000292234"}
+﻿

@@ -2,7 +2,7 @@
 
 public class Program
 {
-    public static void Main()
+    public static void Main(string[] args)
     {
         var engine = new ActEngine();
         var act = engine.CreateAct();

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aGKMzKbVZq5ZfII4UiFRytWOYOCb1JqNc8WfYCgBH2j6EUP0ZM3ww6w+KoCfmWgzvMm71GtBR93cDM0fZIA/Bw==",
+  "dgSpecHash": "ZLd/ZgKvcOqt/zYSlVpHOaSb62EBkkHJ9ZOu4o7kNguLOo00Fwsb/7kXFAk4OWwZPIPy2OQDoOb2uLO5Qm670A==",
   "success": true,
-  "projectFilePath": "E:\\VisualStudio\\ActManager\\ActManager.csproj",
+  "projectFilePath": "E:\\portfolio\\portfolio\\ConsoleApplication\\ActManager\\ActManager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Xarda\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],

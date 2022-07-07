@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\VisualStudio\\ActManager\\ActManager.csproj": {}
+    "E:\\portfolio\\portfolio\\ConsoleApplication\\ActManager\\ActManager.csproj": {}
   },
   "projects": {
-    "E:\\VisualStudio\\ActManager\\ActManager.csproj": {
+    "E:\\portfolio\\portfolio\\ConsoleApplication\\ActManager\\ActManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\VisualStudio\\ActManager\\ActManager.csproj",
+        "projectUniqueName": "E:\\portfolio\\portfolio\\ConsoleApplication\\ActManager\\ActManager.csproj",
         "projectName": "ActManager",
-        "projectPath": "E:\\VisualStudio\\ActManager\\ActManager.csproj",
+        "projectPath": "E:\\portfolio\\portfolio\\ConsoleApplication\\ActManager\\ActManager.csproj",
         "packagesPath": "C:\\Users\\Xarda\\.nuget\\packages\\",
-        "outputPath": "E:\\VisualStudio\\ActManager\\obj\\",
+        "outputPath": "E:\\portfolio\\portfolio\\ConsoleApplication\\ActManager\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 ﻿namespace ActManager.Models;
 
-    public enum ActType
-    {
-        GoodsAct,
-        DeliveryAct
-    }
-
+public enum ActType
+{
+    GoodsAct,
+    DeliveryAct,
+    ReturnAct
+}
