@@ -2,14 +2,6 @@
 <h3 align="center">I'm Alexander, Development C# from Moscow 🏰</h3>
 <h3 align="center"></h3>
 
-- :trophy: 
-
-- :hammer_and_wrench: 
-
-- :mortar_board: 
-
-- :snowflake: 
-
 - 📄 Know about my experience - you can **request me for CV** by email/telegram
 
 <h3 align="left">What I do: </h3>
