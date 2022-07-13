@@ -1,0 +1,6 @@
+select e.type, ec.colvir_code
+from datamart.edo_client_process ec
+
+join DATAMART.EDO_PROCESSES e on ec.process_id=e.id and e.type='Смена руководителя'
+join datamart.edo_tasks  eth on e.id = eth.process_id
+join (select * from stage.edo_copytask where comment_in is not null) ct on ct.id = eth.task_id

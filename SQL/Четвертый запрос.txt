@@ -1,0 +1,36 @@
+with 
+
+s as (select c.colvir_code colvir
+                  ,c.reg_date -- создниедоговора
+                  ,c.first_salary_date -- перваярабоперврамкахдогоавора
+from datamart.salary_contracts c
+where c.status = 'Open'),
+            
+a as (select p.permanent_id as colvir
+             ,trunc(s.reg_date) fromdate 
+             ,trunc(s.first_salary_date) first_salary_date
+             ,min(e.i_creation_time) create_date
+from stage.rs_bank b
+join stage.rs_payroll_employee e on b.id = e.id_beneficiary_bank
+join stage.rs_customer p on p.id = e.id_owner
+join s on s.colvir=p.permanent_id
+where 1=1
+and trunc(s.reg_date)>= date'2021-12-01'
+group by p.permanent_id,trunc(s.reg_date),trunc(s.first_salary_date))
+
+select count(distinct t.customer_code) colvir
+                     --,trunc(t.updated_at) updated_at
+  --                   ,u.created_at as дата_запуска
+                     ,count(distinct case when t.status <> 'NEED_SHOW' then t.customer_code end) cnt_show_banner
+                     ,count(distinct case when t.status = 'DO_NOT_SHOW' and t.agreed=0 then t.customer_code end) cnt_abandoned_the_banner
+                     ,count(distinct case when t.status ='DO_NOT_SHOW' and t.agreed = 1 and t.show = 1  then t.customer_code end) cnt_followed_the_link
+                     ,count(distinct case when t.status ='DO_NOT_SHOW' and t.agreed = 1 and t.show = 1 and a.fromdate>=trunc(t.updated_at) then a.colvir end) buy_product
+                     --,count(distinct case when t.status ='DO_NOT_SHOW' and t.agreed = 1 and t.show = 1 and a.create_date>=trunc(t.updated_at)  and a.create_date>=a.fromdate then a.colvir end) add_in
+                     ,count(distinct case when t.status ='DO_NOT_SHOW' and t.agreed = 1 and t.show = 1 and a.first_salary_date>=trunc(t.updated_at) and a.fromdate is not null then a.colvir end) pay_in
+from datamart.information_center_universalevent u
+join stage.information_center_clientuniversalevent t on t.event_id=u.id
+left join a on a.colvir = t.customer_code
+join DATAMART.CLIENT a1 on t.customer_code = a1.colvir_code 
+where u.event_name in ('main_banner_zp_10+_0r')
+      and a1.orsdate <= date'2021-08-01'
+--and a.fromdate>=t.created_at
