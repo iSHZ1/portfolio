@@ -1,0 +1,16 @@
+select distinct cl.colvir_code
+                ,cl.ORSDATE
+                ,trunc(ch.DT1) date_cr
+                ,ch.TAGS
+                ,ch.BODY_STR
+                ,round((ch.dt1-cl.ORSDATE)*24) hour_cnt
+                ,round(ch.dt1-cl.ORSDATE) days_cnt
+                ,au.ROLE_NAME
+                ,au.PHYS_CODE
+from datamart.client cl
+join DATAMART.V_COMM_CHAT ch on cl.colvir_code=ch.client_code and ch.DIRECTION=1
+left join DATAMART.V_COMM_CHAT_TAGS t on ch.REC_GID=t.SESSION_GID
+left join datamart.AUTHORIZED au on au.PHYS_CODE=ch.PHYS_CODE and au.JUR_CODE=ch.CLIENT_CODE and au.FROMTABLE='Уполномоченные лица'
+where trunc(cl.ORSDATE,'mm') >= date'2021-09-01' and trunc(cl.ORSDATE,'mm') <= date'2021-10-01'
+      and ch.DT1 between cl.ORSDATE and cl.ORSDATE+14
+      and t.NAME like '%Реквизиты%'

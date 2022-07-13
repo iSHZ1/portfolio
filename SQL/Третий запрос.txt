@@ -1,0 +1,74 @@
+WITH 
+T1 as (     -- без блокировок, не коричневые
+   select
+      COLVIR_CODE FROM DATAMART.CLIENT c
+WHERE 
+OPEN_ACC = 1 
+and fns_lock = 0 
+and fraudstatus != 'Коричневый' 
+--and workers > 5
+and TRF_NAME in ('"Развитие"')), 
+
+T2 as (SELECT  COLVIR_CODE              -- Пользователи без ЗП
+FROM  DATAMART.CLIENT_PRODUCTS
+WHERE (product_name = 'Зарплатный проект' and product_status = 'закрыл') or COLVIR_CODE NOT IN (SELECT COLVIR_CODE from DATAMART.CLIENT_PRODUCTS
+WHERE product_name = 'Зарплатный проект' and product_status != 'закрыл')),
+
+T3 as (
+select CLIENT_CODE as COLVIR_CODE
+from datamart.CLIENT_PROFITABILITY
+where CLIENT_CODE NOT IN (
+  select 
+  CLIENT_CODE as COLVIR_CODE
+  from datamart.CLIENT_PROFITABILITY a
+  where 1=1 
+        and a.DOPER BETWEEN date'2021-10-01' and date'2021-11-01'
+        and a.VASO_NAME = 'Комиссии за перевод на ФЛ'
+)),
+
+T4 as (select b.CLIENT_CODE           -- В платежках самозанятый
+                /*b.CONTRACTOR_INN
+                ,b.CONTRACTOR_NAME                
+                ,max(b.TRANZ_EXEC_TIME)
+                ,b.SUM_RUB
+                ,b.PAY_TO_SELFEMPLOYED
+                ,b.CONTRACTOR_BANK_BIC
+                ,b.CONTRACTOR_ACC_NUM
+                ,case
+                    when b.CONTRACTOR_ACC_NUM like '40820%' then 1
+                    else 0
+                    end as not_resident */
+           from datamart.BANK_PAYMENTS b
+           where 1 = 1
+             and b.PAY_OUT_FL = 1
+             and b.IS_SBP = 0
+             and b.TRANZ_DATE between date'2021-10-01' and date'2021-11-21'
+             -- and b.TRANZ_DATE between sysdate-6 and sysdate
+             and b.PAY_OUT_IPFL = 0
+             and b.SALARY = 0
+             -- and not b.CONTRACTOR_INN = 0
+             -- and b.CLIENT_CODE = '302042532'
+             and (lower(b.PURPOSE) like '%самозан%')
+           /* group by b.CONTRACTOR_INN, b.CONTRACTOR_NAME
+                   ,b.CLIENT_CODE
+                   ,b.TRANZ_EXEC_TIME
+                   ,b.SUM_RUB
+                   ,b.PAY_TO_SELFEMPLOYED
+                   ,b.CONTRACTOR_BANK_BIC
+                   ,b.CONTRACTOR_ACC_NUM */
+                   
+                      group by b.CLIENT_CODE
+                      having count(b.CLIENT_CODE) > 6
+),
+
+
+T5 as (select u.JUR_CODE,trunc(max(u.EVENT_TIME),'dd') as date_view  -- дата захода в акву
+            from datamart.LAST_USER_EVENTS_AQUA u
+            where 1=1 and trunc(u.EVENT_TIME,'dd') >= date'2021-11-01' and u.JUR_CODE is not null
+            group by u.JUR_CODE)
+
+select distinct T1.COLVIR_CODE  from T1
+JOIN T2 on T1.COLVIR_CODE = T2.COLVIR_CODE
+JOIN T3 on T1.COLVIR_CODE = T3.COLVIR_CODE
+JOIN T5 on T1.COLVIR_CODE = T5.JUR_CODE
+JOIN T4 on T1.COLVIR_CODE = T4.CLIENT_CODE
