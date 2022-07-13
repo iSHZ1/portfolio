@@ -19,10 +19,14 @@
 
 ### My latest project:
 #### ConsoleApplication:
-#### - (The link will appear in the future)
+#### - [Game Tic tac toe](https://github.com/Alex-SHZ/portfolio/tree/main/ConsoleApplication/NaughtsAndCrosses)
+#### - [Game Snake](https://github.com/Alex-SHZ/portfolio/tree/main/ConsoleApplication/Snake)
+#### - [ActManager](https://github.com/Alex-SHZ/portfolio/tree/main/ConsoleApplication/ActManager)
 #### WPF:
-#### - (The link will appear in the future)
+#### - [Game ping pong on WPF](https://github.com/Alex-SHZ/portfolio/tree/main/WPF/PingPong)
 #### xUnit tests:
-#### - (The link will appear in the future)
+#### - [Unit tests on ActManager](https://github.com/Alex-SHZ/portfolio/tree/main/ConsoleApplication/ActEngineTests)
 #### ASP.NET:
-#### - (The link will appear in the future)
+#### - [Accounting of personnel at the enterprise](https://github.com/Alex-SHZ/portfolio/tree/main/ASP.NET/InternShip)
+#### SQL:
+#### - [SQL request](https://github.com/Alex-SHZ/portfolio/tree/main/SQL)
