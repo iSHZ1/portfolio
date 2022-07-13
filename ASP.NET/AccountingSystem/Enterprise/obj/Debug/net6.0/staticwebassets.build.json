@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "HT+hD4Yh5oEPY/k2zK7wM2yBd7X0qupPXVzUp/u9MyU=",
+  "Source": "Enterprise",
+  "BasePath": "_content/Enterprise",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Enterprise\\wwwroot",
+      "Source": "Enterprise",
+      "ContentRoot": "E:\\portfolio\\portfolio\\ASP.NET\\AccountingSystem\\Enterprise\\wwwroot\\",
+      "BasePath": "_content/Enterprise",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "E:\\portfolio\\portfolio\\ASP.NET\\AccountingSystem\\Enterprise\\wwwroot\\css\\style.css",
+      "SourceId": "Enterprise",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\portfolio\\portfolio\\ASP.NET\\AccountingSystem\\Enterprise\\wwwroot\\",
+      "BasePath": "_content/Enterprise",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
+      "Identity": "E:\\portfolio\\portfolio\\ASP.NET\\AccountingSystem\\Enterprise\\wwwroot\\css\\style.css.map",
+      "SourceId": "Enterprise",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\portfolio\\portfolio\\ASP.NET\\AccountingSystem\\Enterprise\\wwwroot\\",
+      "BasePath": "_content/Enterprise",
+      "RelativePath": "css/style.css.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css.map"
+    },
+    {
+      "Identity": "E:\\portfolio\\portfolio\\ASP.NET\\AccountingSystem\\Enterprise\\wwwroot\\css\\style.scss",
+      "SourceId": "Enterprise",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\portfolio\\portfolio\\ASP.NET\\AccountingSystem\\Enterprise\\wwwroot\\",
+      "BasePath": "_content/Enterprise",
+      "RelativePath": "css/style.scss",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.scss"
+    }
+  ]
+}
